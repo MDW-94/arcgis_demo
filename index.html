@@ -9,27 +9,43 @@
       href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌎</text></svg>"
     />
 
+    <script type="module" src="/src/main.jsx"></script>
+
     <title>ArcGIS Demo - Avon and Somerset Police</title>
 
     <style>
+      /* Whole App */
+      html,
       body {
         overflow: hidden;
-      }
-
-      html,
-      body,
-      #root,
-      .viewDiv {
         padding: 0;
         margin: 0;
-        height: 100%;
         width: 100%;
-        background-color: black;
+        height: 100%;
+        font-feature-settings: "liga" 1, "calt" 0;
+        background: black;
+      }
+
+      /* Map CSS */
+      #root, .viewDiv {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        height: 80%;
+        letter-spacing: 0em;
+        line-height: 1.55rem;
+      }
+
+      #cr {
+        position: absolute;
+        right: 1%;
+        bottom: 0%;
+        margin: 0%;
       }
     </style>
   </head>
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <p id="cr">© 2024 M. Wasylko</p>
   </body>
 </html>
