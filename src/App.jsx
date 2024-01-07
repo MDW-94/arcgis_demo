@@ -3,7 +3,7 @@ import WebMap from "../components/WebMap"
 
 function App() {
 
-  const [mapSelection, setMapSelection] = useState(0);
+  const [mapSelection, setMapSelection] = useState(1);
 
   const handleMapChange = (event) => {
     setMapSelection(event.target.value);

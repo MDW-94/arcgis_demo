@@ -7,8 +7,9 @@ const WebMap = ({mapSelection}) => {
     const viewRef = useRef();
 
     useEffect(() => {
+        const selectMapId = switchMap(mapSelection);
+        console.log(selectMapId)
         import("../lib/app").then(function(app){
-            const selectMapId = switchMap(mapSelection);
             app.webMap.portalItem.id = selectMapId;
             app.initialize(viewRef.current)
         })
