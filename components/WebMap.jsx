@@ -1,6 +1,5 @@
 import { useEffect, useRef } from "react";
 
-
 const WebMap = () => {
 
     const viewRef = useRef();
