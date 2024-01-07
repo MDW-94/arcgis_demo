@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { switchMap } from "../lib/app";
 
+// eslint-disable-next-line react/prop-types
 const WebMap = ({mapSelection}) => {
 
     const viewRef = useRef();
