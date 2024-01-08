@@ -16,6 +16,7 @@
 }
 
 #react-select:hover {
+    transition: 1s;
     background-color: whitesmoke;
     color: black;
 }
