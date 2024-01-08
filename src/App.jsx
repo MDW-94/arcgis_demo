@@ -1,30 +1,28 @@
 import { useState } from "react"
-import WebMap from "../components/WebMap"
+import WebMap from '../components/WebMap';
+import { webmaps } from '../lib/app'
 
 function App() {
 
-  const [mapSelection, setMapSelection] = useState(1);
+  const [mapSelection, setMapSelection] = useState(webmaps[1].id);
 
   const handleMapChange = (event) => {
     setMapSelection(event.target.value);
     console.log(event.target.value)
-    console.log(mapSelection)
   }
 
   return (
     <>
-      {/* These ternaries use strictequal but not deepstrictequal - doesn't work otherwise ?? */}
-      {mapSelection == null && <h1>ArcGIS Demo Application</h1>}
-      {mapSelection == 0 && <h1>Avon and Somerset Police Data</h1>}
-      {mapSelection == 1 && <h1>Crime and Poverty UK</h1>}
+      <h1>{webmaps.find((webmap) => webmap.id == mapSelection).title}</h1>
       
       <WebMap mapSelection={mapSelection}/>
 
       <div>
         <h2>UI</h2>
         <select onChange={handleMapChange} value={mapSelection}>
-          <option value={0}>Avon and Somerset Map</option>
-          <option value={1}>Crime and Poverty UK</option>
+          {webmaps.map((webMap) => (
+            <option key={webMap.id} value={webMap.id}>{webMap.title}</option>
+          ))}
         </select>
       </div>
     </>
