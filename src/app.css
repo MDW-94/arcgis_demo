@@ -1,22 +1,21 @@
 .react-ui-bottom {
-    text-align: left;
-    padding: 1em;
+  text-align: left;
+  padding: 1em;
 }
 
-#react-select{
-    font-size: 1em;
-    background-color: black;
-    color: whitesmoke;
-    padding: 0.25em;
+#react-select {
+  font-size: 1em;
+  background-color: black;
+  color: whitesmoke;
+  padding: 0.25em;
 
-    border-style: groove;
-    border-width: 0.1em;
-    border-radius: 0.5em;
-    
+  border-style: groove;
+  border-width: 0.1em;
+  border-radius: 0.5em;
 }
 
 #react-select:hover {
-    transition: 1s;
-    background-color: whitesmoke;
-    color: black;
+  transition: 1s;
+  background-color: whitesmoke;
+  color: black;
 }
