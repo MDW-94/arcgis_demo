@@ -2,6 +2,10 @@ import { useState } from "react"
 import WebMap from '../components/WebMap';
 import { webmaps } from '../lib/app'
 
+import '../src/app.css'
+
+
+
 function App() {
 
   const [mapSelection, setMapSelection] = useState(webmaps[1].id);
@@ -17,8 +21,7 @@ function App() {
       
       <WebMap mapSelection={mapSelection}/>
 
-      <div>
-        <h2>UI</h2>
+      <div className="react-ui-bottom">
         <select onChange={handleMapChange} value={mapSelection}>
           {webmaps.map((webMap) => (
             <option key={webMap.id} value={webMap.id}>{webMap.title}</option>
