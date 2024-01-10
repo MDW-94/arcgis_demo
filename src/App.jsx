@@ -29,6 +29,8 @@ function App() {
             </option>
           ))}
         </select>
+
+        <p>{webmaps.find((webmap) => webmap.id == mapSelection).info}</p>
       </div>
     </>
   );

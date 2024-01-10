@@ -184,7 +184,7 @@ export const webMap = new WebMap({
 
   portalItem: {
     id: webmap_id,
-  }
+  };
 });
 ```
 - We've declared that we want a WebMap from the @arcgis/core library
